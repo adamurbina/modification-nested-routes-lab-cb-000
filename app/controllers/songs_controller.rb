@@ -53,7 +53,6 @@ class SongsController < ApplicationController
       end
     else
       @song = Song.find_by(id: params[:id])
-      render :edit
     end
   end
 
