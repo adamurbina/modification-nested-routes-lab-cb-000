@@ -6,7 +6,7 @@ module ArtistsHelper
   def artist_select(song, artist)
 
     if song.artist == artist
-      hidden_field_tag "song[artist_id]", song.author_id
+      hidden_field_tag "song[artist_id]", song.artist_id
     else
       select_tag "song[artist_id]", options_from_collection_for_select[Artist.all, :id, :name]
     end
